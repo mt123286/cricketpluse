@@ -189,6 +189,20 @@ const match = {
 document.getElementById("score").innerText =
   match.team + ": " + match.runs + "/" +
   match.wickets + " (" + match.overs + " overs)";
+
+  const match = {
+  team: "Pakistan",
+  runs: 185,
+  wickets: 4,
+  overs: 20
+};
+
+function showScore(data) {
+  document.getElementById("score").innerText =
+    `${data.team}: ${data.runs}/${data.wickets}`;
+}
+
+showScore(match);
 </script>
 </body>
 </html>
