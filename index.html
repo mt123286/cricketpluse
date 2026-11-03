@@ -162,7 +162,22 @@ footer {
   <p>World Cricket. One Destination.</p>
   <p>© 2026 CricketPulse</p>
 </footer>
+<h2>Live Cricket Score</h2>
+<p id="score">Score loading...</p>
 
+<script>
+const match = {
+  team: "Pakistan",
+  runs: 150,
+  wickets: 3,
+  overs: 18
+};
+
+document.getElementById("score").innerText =
+  match.team + ": " + match.runs + "/" +
+  match.wickets + " (" + match.overs + " overs)";
+</script>
 </body>
 </html>
+
 
