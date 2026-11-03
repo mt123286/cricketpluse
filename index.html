@@ -1,68 +1,168 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>CricketPulse</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f1f5f9;
-        }
-        header {
-            background: #064e3b;
-            color: white;
-            padding: 22px;
-            text-align: center;
-        }
-        nav {
-            background: #022c22;
-            padding: 15px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            margin: 10px;
-            text-decoration: none;
-        }
-        .score {
-            background: white;
-            margin: 20px;
-            padding: 20px;
-            border-radius: 12px;
-        }
-        h2 { color: #064e3b; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CricketPulse - Live Cricket</title>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f5f8;
+  color: #202b38;
+}
+header {
+  background: #063b32;
+  color: white;
+  padding: 20px 6%;
+}
+.logo {
+  font-size: 27px;
+  font-weight: bold;
+}
+.logo span {
+  color: #7ee5a5;
+}
+nav {
+  background: #075343;
+  padding: 14px 6%;
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.container {
+  max-width: 1100px;
+  margin: 25px auto;
+  padding: 0 15px;
+}
+.section-title {
+  font-size: 21px;
+  margin: 25px 0 15px;
+}
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 10px #0000000b;
+}
+.tag {
+  color: #e14b43;
+  font-weight: bold;
+  font-size: 12px;
+}
+.match {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 18px 0;
+}
+.team {
+  font-size: 16px;
+  font-weight: bold;
+}
+.score {
+  font-size: 18px;
+  font-weight: bold;
+}
+.details {
+  color: #718096;
+  font-size: 13px;
+}
+footer {
+  background: #063b32;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>🏏 CricketPulse</h1>
-    <p>International Cricket Updates</p>
+  <div class="logo">🏏 Cricket<span>Pulse</span></div>
+  <p>World Cricket. One Destination.</p>
 </header>
 
 <nav>
-    <a href="#">Home</a>
-    <a href="#">Live Scores</a>
-    <a href="#">Upcoming</a>
-    <a href="#">News</a>
+  <a href="#">Home</a>
+  <a href="#live">Live Scores</a>
+  <a href="#upcoming">Upcoming</a>
+  <a href="#results">Results</a>
+  <a href="#news">News</a>
 </nav>
 
-<div class="score">
-    <h2>🏏 Live Cricket</h2>
-    <p>No live matches available right now.</p>
+<div class="container">
+
+<h2 class="section-title" id="live">🔴 Live Matches</h2>
+
+<div class="card">
+  <span class="tag">● LIVE DEMO</span>
+  <p class="details">International Cricket</p>
+  <div class="match">
+    <div class="team">🇵🇰 Pakistan</div>
+    <div class="score">145/4</div>
+  </div>
+  <div class="match">
+    <div class="team">🇮🇳 India</div>
+    <div class="score">Yet to bat</div>
+  </div>
+  <p class="details">Demo score — not a real match</p>
 </div>
 
-<div class="score">
-    <h2>📅 Upcoming Matches</h2>
-    <p>International Cricket Updates Coming Soon!</p>
+<h2 class="section-title" id="upcoming">📅 Upcoming Matches</h2>
+
+<div class="card">
+  <div class="tag">UPCOMING DEMO</div>
+  <div class="match">
+    <div class="team">🇦🇺 Australia</div>
+    <div>VS</div>
+    <div class="team">🇬🇧 England</div>
+  </div>
+  <p class="details">Example fixture — date to be updated</p>
 </div>
 
-<div class="score">
-    <h2>🏆 Match Results</h2>
-    <p>Latest Match Results Coming Soon!</p>
+<h2 class="section-title" id="results">🏆 Recent Results</h2>
+
+<div class="card">
+  <div class="match">
+    <div class="team">🇿🇦 South Africa</div>
+    <div class="score">Demo</div>
+  </div>
+  <div class="match">
+    <div class="team">🇳🇿 New Zealand</div>
+    <div class="score">Demo</div>
+  </div>
+  <p class="details">Example result — not an actual match result</p>
 </div>
+
+<h2 class="section-title" id="news">📰 Cricket News</h2>
+
+<div class="card">
+  <h3>Latest Cricket Updates</h3>
+  <p class="details">Your international cricket news section starts here.</p>
+</div>
+
+</div>
+
+<footer>
+  <div class="logo">🏏 CricketPulse</div>
+  <p>World Cricket. One Destination.</p>
+  <p>© 2026 CricketPulse</p>
+</footer>
 
 </body>
 </html>
+
