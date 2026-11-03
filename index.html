@@ -189,7 +189,10 @@ const match = {
 document.getElementById("score").innerText =
   match.team + ": " + match.runs + "/" +
   match.wickets + " (" + match.overs + " overs)";
-
+setInterval(function() {
+  match.runs = match.runs + 1;
+  showScore(match);
+}, 2000);
 </script>
 </body>
 </html>
