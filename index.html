@@ -163,21 +163,8 @@ footer {
   <p>© 2026 CricketPulse</p>
 </footer>
 <h2>Live Cricket Score</h2>
-<p id="score">Score loading...</p>
-  const match = {
-  team: "Pakistan",
-  runs: 185,
-  wickets: 4,
-  overs: 20
-};
+<p id="score">Loading...</p>
 
-function showScore(data) {
-  document.getElementById("score").innerText =
-    `${data.team}: ${data.runs}/${data.wickets}`;
-}
-
-showScore(match);
-<p id="score"></p>
 <script>
 const match = {
   team: "Pakistan",
@@ -186,15 +173,17 @@ const match = {
   overs: 18
 };
 
-document.getElementById("score").innerText =
-  match.team + ": " + match.runs + "/" +
-  match.wickets + " (" + match.overs + " overs)";
+function showScore(data) {
+  document.getElementById("score").innerText =
+    data.team + ": " + data.runs + "/" + data.wickets;
+}
+
+showScore(match);
+
 setInterval(function() {
-  match.runs = match.runs + 1;
+  match.runs++;
   showScore(match);
 }, 2000);
 </script>
-</body>
-</html>
 
 
